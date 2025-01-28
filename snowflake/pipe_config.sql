@@ -25,7 +25,7 @@ auto_ingest = true
 as
 copy into customer_raw
 file_format = SCD_DEMO.SCD2.CSV
-from @SCD_PROJECT.SCD2.customer_ext_stage;
+from @SCD_DEMO.SCD2.customer_ext_stage;
 
 show pipes;
 select SYSTEM$PIPE_STATUS('customer_s3_pipe');
