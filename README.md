@@ -15,7 +15,7 @@ This project builds a real-time data streaming pipeline to handle customer data 
 
 ## Data Flow Process
 
-### Data Generation → Python script generates synthetic customer data.
+### Data Generation (Python script generates synthetic customer data)
 - Custom Python script using Faker library
 - Docker containerization
 - Volume mounting for data sharing
