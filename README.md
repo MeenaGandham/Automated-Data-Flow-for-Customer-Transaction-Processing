@@ -15,22 +15,21 @@ This project builds a real-time data streaming pipeline to handle customer data 
 
 ## Data Flow Process
 
-### Data Generation (Python script generates synthetic customer data)
+### Data Generation 
 - Custom Python script using Faker library
 - Docker containerization
 - Volume mounting for data sharing
 - Configurable data generation intervals
 
-### Data Ingestion → Apache NiFi processes and transfers data to Amazon S3 and Cloud Storage → Data lands in Amazon S3 for staging.
-
+### Data Ingestion, Transfer and Cloud Storage
 - Apache NiFi for data flow management
 - Apache ZooKeeper for distributed coordination
 - AWS EC2 for hosting services
 - S3 bucket for data lake storage
 
-![NiFi Flow Configuration Screenshot](resources/imgs/nifi_flow_in_process.png)
+![NiFi Flow Configuration Screenshot](resources/processors_flow.png)
 
-### Automated Processing → Snowpipe loads new data into Snowflake, Change Data Capture (CDC) → Snowflake Streams capture data changes, Transformation → Snowflake Tasks apply SCD1 & SCD2 logic and Final Data Storage → Data is merged into historical and final tables.
+### Automated Processing and Change Data Capture (CDC) 
 
 - Snowflake for data warehousing
 - Snowpipe for automated data loading
