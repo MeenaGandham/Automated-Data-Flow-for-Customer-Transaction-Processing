@@ -3,7 +3,7 @@
 ## Overview
 This project builds a real-time data streaming pipeline to handle customer data efficiently, enabling data ingestion, processing, and transformation using modern cloud-based technologies. The pipeline is designed to handle Slowly Changing Dimensions (SCD1 & SCD2) in Snowflake, leveraging Apache NiFi for real-time ingestion and Snowpipe for automated data loading.
 
-![Architecture Diagram](resources/imgs/Real%20Time%20Pipeline.png)
+![Architecture Diagram](resources/architecture_realtime.jpg)
 
 ## Key Features
 - Real-time Data Generation using Python
