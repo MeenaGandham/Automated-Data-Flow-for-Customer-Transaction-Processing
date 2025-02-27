@@ -37,7 +37,7 @@ BEGIN
     
     -- Update SCD2 History Table
     merge into customer_history ch
-    using v_customer_changing_data ccd
+    using v_customer_change_data ccd
         on ch.customer_id = ccd.customer_id
         and ch.start_time = ccd.start_time
     when matched and ccd.dml_type = 'D' then update
